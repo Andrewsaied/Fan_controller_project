@@ -1,0 +1,399 @@
+18:18:24 **** Build of configuration Debug for project Project_3 ****
+make all 
+Building file: ../ADC_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"ADC_Program.d" -MT"ADC_Program.o" -c -o "ADC_Program.o" "../ADC_Program.c"
+../ADC_Program.c: In function 'ADC_ReadValue':
+../ADC_Program.c:44: warning: suggest parentheses around comparison in operand of &
+Finished building: ../ADC_Program.c
+ 
+Building file: ../DC_Motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"DC_Motor.d" -MT"DC_Motor.o" -c -o "DC_Motor.o" "../DC_Motor.c"
+../DC_Motor.c: In function 'DcMotor_Rotate':
+../DC_Motor.c:69: warning: label 'deafult' defined but not used
+Finished building: ../DC_Motor.c
+ 
+Building file: ../GPIO_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"GPIO_Program.d" -MT"GPIO_Program.o" -c -o "GPIO_Program.o" "../GPIO_Program.c"
+Finished building: ../GPIO_Program.c
+ 
+Building file: ../LCD_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"LCD_Program.d" -MT"LCD_Program.o" -c -o "LCD_Program.o" "../LCD_Program.c"
+In file included from ../LCD_Program.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD_Program.c: In function 'LCD_intgerToString':
+../LCD_Program.c:144: warning: implicit declaration of function 'itoa'
+Finished building: ../LCD_Program.c
+ 
+Building file: ../Timer0.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Timer0.d" -MT"Timer0.o" -c -o "Timer0.o" "../Timer0.c"
+Finished building: ../Timer0.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Project_3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Project_3.map -mmcu=atmega16 -o "Project_3.elf"  ./ADC_Program.o ./DC_Motor.o ./GPIO_Program.o ./LCD_Program.o ./Timer0.o ./lm35_sensor.o ./main.o   
+Finished building target: Project_3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Project_3.elf  >"Project_3.lss"
+Finished building: Project_3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Project_3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9736 bytes (59.4% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (28.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:18:38 **** Incremental Build of configuration Debug for project Project_3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Project_3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9736 bytes (59.4% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (28.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:20:50 **** Incremental Build of configuration Debug for project Project_3 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Project_3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Project_3.map -mmcu=atmega16 -o "Project_3.elf"  ./ADC_Program.o ./DC_Motor.o ./GPIO_Program.o ./LCD_Program.o ./Timer0.o ./lm35_sensor.o ./main.o   
+Finished building target: Project_3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Project_3.elf  >"Project_3.lss"
+Finished building: Project_3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Project_3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9736 bytes (59.4% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (28.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:21:07 **** Incremental Build of configuration Debug for project Project_3 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Project_3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Project_3.map -mmcu=atmega16 -o "Project_3.elf"  ./ADC_Program.o ./DC_Motor.o ./GPIO_Program.o ./LCD_Program.o ./Timer0.o ./lm35_sensor.o ./main.o   
+Finished building target: Project_3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Project_3.elf  >"Project_3.lss"
+Finished building: Project_3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Project_3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9726 bytes (59.4% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (28.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:25:25 **** Incremental Build of configuration Debug for project Project_3 ****
+make all 
+Building file: ../DC_Motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"DC_Motor.d" -MT"DC_Motor.o" -c -o "DC_Motor.o" "../DC_Motor.c"
+../DC_Motor.c: In function 'DcMotor_Rotate':
+../DC_Motor.c:68: warning: label 'deafult' defined but not used
+Finished building: ../DC_Motor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Project_3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Project_3.map -mmcu=atmega16 -o "Project_3.elf"  ./ADC_Program.o ./DC_Motor.o ./GPIO_Program.o ./LCD_Program.o ./Timer0.o ./lm35_sensor.o ./main.o   
+Finished building target: Project_3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Project_3.elf  >"Project_3.lss"
+Finished building: Project_3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Project_3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9740 bytes (59.4% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (28.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:25:30 **** Incremental Build of configuration Debug for project Project_3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Project_3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9740 bytes (59.4% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (28.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:28:08 **** Incremental Build of configuration Debug for project Project_3 ****
+make all 
+Building file: ../Timer0.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Timer0.d" -MT"Timer0.o" -c -o "Timer0.o" "../Timer0.c"
+Finished building: ../Timer0.c
+ 
+Building target: Project_3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Project_3.map -mmcu=atmega16 -o "Project_3.elf"  ./ADC_Program.o ./DC_Motor.o ./GPIO_Program.o ./LCD_Program.o ./Timer0.o ./lm35_sensor.o ./main.o   
+Finished building target: Project_3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Project_3.elf  >"Project_3.lss"
+Finished building: Project_3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Project_3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9726 bytes (59.4% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (28.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:30:41 **** Incremental Build of configuration Debug for project Project_3 ****
+make all 
+Building file: ../Timer0.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Timer0.d" -MT"Timer0.o" -c -o "Timer0.o" "../Timer0.c"
+Finished building: ../Timer0.c
+ 
+Building target: Project_3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Project_3.map -mmcu=atmega16 -o "Project_3.elf"  ./ADC_Program.o ./DC_Motor.o ./GPIO_Program.o ./LCD_Program.o ./Timer0.o ./lm35_sensor.o ./main.o   
+Finished building target: Project_3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Project_3.elf  >"Project_3.lss"
+Finished building: Project_3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Project_3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9726 bytes (59.4% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (28.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:32:40 **** Incremental Build of configuration Debug for project Project_3 ****
+make all 
+Building file: ../ADC_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"ADC_Program.d" -MT"ADC_Program.o" -c -o "ADC_Program.o" "../ADC_Program.c"
+../ADC_Program.c: In function 'ADC_ReadValue':
+../ADC_Program.c:44: warning: suggest parentheses around comparison in operand of &
+Finished building: ../ADC_Program.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Project_3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Project_3.map -mmcu=atmega16 -o "Project_3.elf"  ./ADC_Program.o ./DC_Motor.o ./GPIO_Program.o ./LCD_Program.o ./Timer0.o ./lm35_sensor.o ./main.o   
+Finished building target: Project_3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Project_3.elf  >"Project_3.lss"
+Finished building: Project_3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Project_3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9726 bytes (59.4% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (28.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:32:46 **** Incremental Build of configuration Debug for project Project_3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Project_3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9726 bytes (59.4% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (28.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:33:53 **** Incremental Build of configuration Debug for project Project_3 ****
+make all 
+Building file: ../ADC_Program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"ADC_Program.d" -MT"ADC_Program.o" -c -o "ADC_Program.o" "../ADC_Program.c"
+../ADC_Program.c: In function 'ADC_ReadValue':
+../ADC_Program.c:44: warning: suggest parentheses around comparison in operand of &
+Finished building: ../ADC_Program.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Project_3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Project_3.map -mmcu=atmega16 -o "Project_3.elf"  ./ADC_Program.o ./DC_Motor.o ./GPIO_Program.o ./LCD_Program.o ./Timer0.o ./lm35_sensor.o ./main.o   
+Finished building target: Project_3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Project_3.elf  >"Project_3.lss"
+Finished building: Project_3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Project_3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9726 bytes (59.4% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (28.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:34:16 **** Incremental Build of configuration Debug for project Project_3 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Project_3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Project_3.map -mmcu=atmega16 -o "Project_3.elf"  ./ADC_Program.o ./DC_Motor.o ./GPIO_Program.o ./LCD_Program.o ./Timer0.o ./lm35_sensor.o ./main.o   
+Finished building target: Project_3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Project_3.elf  >"Project_3.lss"
+Finished building: Project_3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Project_3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9718 bytes (59.3% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (28.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

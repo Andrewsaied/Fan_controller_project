@@ -1,0 +1,61 @@
+/*
+ * main.c
+ *
+ *  Created on: Feb 21, 2022
+ *      Author: Andrew saied
+ */
+
+#include "lm35_sensor.h"
+#include "LCD_Interface.h"
+#include "ADC_Interface.h"
+#include "DC_Motor.h"
+
+
+int main(void)
+{
+	ADC_ConfigType Config_Ptr={internal_ref_volt,pre8};
+	ADC_Init(&Config_Ptr);
+	LCD_init();
+	DcMotor_Init();
+	uint8 temperature;
+	LCD_displayStringRowColumn(0, 0, "FAN is");
+	LCD_displayStringRowColumn(1,0,"Temp =    C");
+	while(1){
+		temperature=LM35_getTemperature();
+		DcMotor_Rotate(CW, 25);
+		if(temperature<30){
+			DcMotor_Rotate(STOP, 0);
+			LCD_displayStringRowColumn(0, 7, "OFF");
+			LCD_moveCursor(1, 7);
+			LCD_intgerToString(temperature);
+			LCD_displayCharacter(' ');
+		}
+		else if(temperature>=30&&temperature<60){
+			DcMotor_Rotate(CW, 25);
+			LCD_displayStringRowColumn(0, 7, "ON ");
+			LCD_moveCursor(1, 7);
+			LCD_intgerToString(temperature);
+			LCD_displayCharacter(' ');
+		}
+		else if(temperature>=60&&temperature<90){
+			DcMotor_Rotate(CW, 50);
+			LCD_displayStringRowColumn(0, 7, "ON");
+			LCD_moveCursor(1, 7);
+			LCD_intgerToString(temperature);
+			LCD_displayCharacter(' ');
+		}
+		else if(temperature>=90&&temperature<120){
+			DcMotor_Rotate(CW, 75);
+			LCD_displayStringRowColumn(0, 7, "ON");
+			LCD_moveCursor(1, 7);
+			LCD_intgerToString(temperature);
+			LCD_displayCharacter(' ');
+		}
+		else if(temperature>=120){
+			DcMotor_Rotate(CW, 100);
+			LCD_displayStringRowColumn(0, 7, "ON");
+			LCD_moveCursor(1, 7);
+			LCD_intgerToString(temperature);
+		}
+	}
+}
